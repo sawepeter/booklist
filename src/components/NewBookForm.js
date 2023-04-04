@@ -6,22 +6,7 @@ const NewBookForm = () => {
     const {title, setTitle} = useState('');
     const {author, setAuthor} = useState('');
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        addBook(title, author);
-        setTitle('');
-        setAuthor('');
-    }
-    return ( 
-        <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="book title" value={title}
-            onChange={(e) => setTitle(e.target.value)} />
-            <input type="text" placeholder="author name" value={author}
-            onChange={(e) => setAuthor(e.target.value)} />
-            <input type="submit" value="Add book"/>
-        </form>
-     );
+   
 }
  
 export default NewBookForm;
