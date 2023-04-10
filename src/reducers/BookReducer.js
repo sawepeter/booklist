@@ -6,8 +6,8 @@ export const BookReducer = (state, action) => {
         return [...state, {
             title: action.book.title,
             author: action.book.author,
-            id: uuidv1()
-        }]
+            id: uuidv1()}
+        ]
         case 'REMOVE_BOOK':
             return state.filter(book => book.id !== action.id);
         default:
